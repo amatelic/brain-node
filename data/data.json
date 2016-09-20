@@ -1,0 +1,349 @@
+{
+    "_id" : ObjectId("57d80549a0aa4c6d3549c09c"),
+    "year" : 2016,
+    "months" : {
+        "January" : [],
+        "February" : [],
+        "March" : [],
+        "April" : [],
+        "May" : [],
+        "June" : [],
+        "July" : [],
+        "August" : [],
+        "September" : [
+            {
+                "name" : "running",
+                "time" : 1200,
+                "days" : [
+                    {
+                        "day" : 1,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 2,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 3,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 4,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 5,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 6,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 7,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 8,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 9,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 10,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 11,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 12,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 13,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 14,
+                        "complited" : 0,
+                        "tracking" : false
+                    },
+                    {
+                        "day" : 15,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 16,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 17,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 18,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 19,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 20,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 21,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 22,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 23,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 24,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 25,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 26,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 27,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 28,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 29,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 30,
+                        "complited" : 1,
+                        "tracking" : true
+                    }
+                ],
+                "schedule" : [
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false
+                ]
+            },
+            {
+                "name" : "suburi",
+                "time" : 2400,
+                "days" : [
+                    {
+                        "day" : 1,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 2,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 3,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 4,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 5,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 6,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 7,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 8,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 9,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 10,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 11,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 12,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 13,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 14,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 15,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 16,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 17,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 18,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 19,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 20,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 21,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 22,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 23,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 24,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 25,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 26,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 27,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 28,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 29,
+                        "complited" : 1,
+                        "tracking" : true
+                    },
+                    {
+                        "day" : 30,
+                        "complited" : 1,
+                        "tracking" : true
+                    }
+                ],
+                "schedule" : [
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false
+                ]
+            }
+        ],
+        "October" : [],
+        "November" : [],
+        "December" : []
+    }
+}

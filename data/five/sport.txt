@@ -1,0 +1,820 @@
+3D Archeryarchery,sport
+3x3basketball,sport
+Abseiling,sport
+Acroski,sport
+Adventure Racing,sport
+Aerials,sport
+Aerobatics,sport
+Acrobatic Gymnastics,sport
+Sport Aerobics,sport
+Aeromodeling,sport
+Aggressive Inline Skatinginline skating,sport
+Aikido,sport
+Air Hockey,sport
+Air Racing,sport
+AirsoftLaser TagPaintball,sport
+Mountainboarding,sport
+Alpine Skiing,sport
+Alpinism,sport
+American FootballGridironArena Football6-Man Football,sport
+American Handball(Team) Handball,sport
+AquabikeTriathlon,sport
+Aquajogging,sport
+AquathlonUnderwater Wrestling,sport
+AquathlonBiathle,sport
+ArcheryTarget ArcheryField ArcheryClout Archery3D archeryCrossbow ArcheryFlight ArcherySki Archery,sport
+Arena FootballAmerican Football,sport
+Arena Polopolo,sport
+Arena RugbyRugby Union,sport
+Arm WrestlingWrestling,sport
+Arnis,sport
+Artistic BilliardsCarom Billiards,sport
+Artistic Cycling,sport
+Artistic GymnasticsVaultFloorPommel HorseRingsParallel BarsHigh BarUneven BarsBalance Beam,sport
+Artistic Pool,sport
+Artistic Roller Skating,sport
+Association FootballFootballSoccer,sport
+AthleticsTrack and FieldCross CountryRunningRoad RunningRacewalking,sport
+Australian  Football,sport
+Australian HandballSquash,sport
+Auto Polopolo,sport
+Auto Race,sport
+Auto Racing Vintage Racing,sport
+AutocrossMotorcycle Gymkhana,sport
+Autograss,sport
+Axe Throwing,sport
+Ba GameMedieval FootballMob Football,sport
+Backstroke,sport
+Badminton,sport
+Balance Beam,sport
+BalklineCarom Billiards,sport
+Ball BadmintonBadminton,sport
+Ball HockeyIce HockeyStreet Hockey,sport
+Ballooning,sport
+BandyRink Bandy,sport
+Banger Racing,sport
+Barefoot Skiing,sport
+Bare-knuckle boxing,sport
+Barrel Racing,sport
+Baseball,sport
+BASE Jumping,sport
+Basketball,sport
+Basque PelotaXareFrontenisValencian PilotaValencian FrontóJai Alai,sport
+Basse,sport
+Bat-and-Trap,sport
+Baton Twirling,sport
+Ice Stock Sport,sport
+Beach Basketball,sport
+Beach Flags,sport
+Beach Golf,sport
+Beach HandballTeam Handball,sport
+Beach Polo,sport
+Beach Rugby,sport
+Beach Soccer,sport
+Beach Tennis,sport
+Beach VolleyballVolleyball,sport
+Beach WoodballWoodball,sport
+Beach Wrestling,sport
+Behcup,sport
+Beikou TarkbeiDaur Hockey,sport
+Belt Wrestling,sport
+Benchpresspowerlifting,sport
+Benchrest Shooting,sport
+BiathleAquathlon,sport
+Biathlon,sport
+Bicycle Motocross (BMX),sport
+Bicycle Polo,sport
+Bikejoring,sport
+cue sportsEnglish Billiards,sport
+Biribol,sport
+Blind Cricket,sport
+BoardercrossSnowboard Cross,sport
+Bobsleigh,sport
+Bocce,sport
+Boccia,sport
+Bodyboarding,sport
+Bodybuilding,sport
+Bolas Criollas,sport
+Boli Khela,sport
+Boomerang Throwing,sport
+Handball,sport
+Bossaball,sport
+Klootschieten,sport
+Bouldering,sport
+Bowling Tenpin Bowling,sport
+Lawn BowlsBowling,sport
+Box lacrosse,sport
+Boxing,sport
+Brännboll,sport
+Breaststroke,sport
+British Baseball,sport
+Broomball,sport
+Bull Fighting,sport
+Bull RidingRodeo Sport,sport
+Bunnock,sport
+Butterfly stroke,sport
+Buzkashi,sport
+Caber Toss,sport
+Calcio Fiorentino,sport
+Calisthenics,sport
+Calva,sport
+Camel Racinghorse racing,sport
+Camel  Jumping,sport
+Cammag,sport
+Camogiehurling,sport
+Campdrafting,sport
+Canadian Football,sport
+Candlepin Bowling,sport
+Chinlone,sport
+Canicross,sport
+Canoe Polo,sport
+Canoeing,sport
+Capoeira,sport
+Capture The Flag,sport
+Carom Billiardscue sportArtistic BilliardsThree-Cushion BilliardsFive-Pin BilliardsBalklineCushion CaromsFour-Ball,sport
+Casting,sport
+Cestoballnetball,sport
+Cheerleading,sport
+Chessboxing,sport
+Chilean Rodeo,sport
+Chinese Handball,sport
+Chinlone,sport
+Chuckwagon Racing,sport
+Circle Rules Football,sport
+Clay Pigeon Shooting,sport
+weight lifting,sport
+Clout Archery,sport
+Club Throw,sport
+Collegiate Wrestling,sport
+Combined Driving,sport
+Competitive Eating,sport
+Corkball,sport
+Cowboy Action Shooting,sport
+Cowboy Mounted Shooting,sport
+Cowboy PoloPolo,sport
+Real Tennis,sport
+Crab Soccer,sport
+Minigolf,sport
+CricketTestOne-DayT20,sport
+Croquet,sport
+Crossbow Archery,sport
+Cross Country Skiing,sport
+Cross-Country Mountain Biking,sport
+Rally Raid,sport
+Cross-country Running,sport
+Crossfit,sport
+Cue SportsPocket Billiards (Pool)Snooker,sport
+Sport Stacking,sport
+Curling,sport
+cue sportCarom Billiards,sport
+Cutting,sport
+Cycling,sport
+Cycle Ball,sport
+Bicycle Polo,sport
+Cycle Speedway,sport
+Cyclo-Cross,sport
+Czech HandballTeam Handball,sport
+Dancesport,sport
+Danish Longball,sport
+Dartchery,sport
+Darts,sport
+Beikou Tarkbeifield hockey,sport
+Deadlifting,sport
+Deaf Basketball,sport
+Decathlon,sport
+Demolition Derby,sport
+Digor,sport
+Disc Dog,sport
+Disc Golf,sport
+Disc Sports,sport
+Discus,sport
+Diving,sport
+Dodgeball,sport
+Dog Agility,sport
+Dog Racing,sport
+Dog Sledding,sport
+Dog Sports,sport
+Downhill Skiing,sport
+Downhill Mountain Biking,sport
+Drag boat racing,sport
+Drag racing,sport
+Dragon Boat Racing,sport
+Dressage,sport
+Drone Racing,sport
+Drunken Boxing,sport
+Duathlon,sport
+Duckpin bowling,sport
+Dumog,sport
+Eight-Ballcue sport,sport
+Eight-man FootballAmerican Football,sport
+Elephant Polo,sport
+Endurance Racing,sport
+Endurance Riding,sport
+Endurance Running,sport
+Enduro,sport
+Endurocross,sport
+English BilliardsBilliardsCue Sports,sport
+Equestrian,sport
+Equestrian Vaulting,sport
+Gaming,sport
+Eton FivesFives,sport
+Handball,sport
+Eventing,sport
+Adventure Racing,sport
+Fast Pitch Softball,sport
+Fast5netball,sport
+Fell Running,sport
+Fencing,sport
+Field ArcheryArchery,sport
+Field HandballHandballOutdoor HandballGrass Handball,sport
+Field Hockey,sport
+Field Lacrosselacrosse,sport
+Field Target,sport
+FierljeppenCanal Jumping,sport
+Figure SkatingIce DancingSynchronized Skating,sport
+Finnish Skittles,sport
+Finswimming,sport
+Sport Fishing,sport
+Fistball,sport
+bare knuckle boxing,sport
+Five-a-Side Football,sport
+Five-pin bowling,sport
+Five-Pin BilliardsCarom Billiards,sport
+Fives,sport
+Flag Football,sport
+Flight Archeryarchery,sport
+Floor (Gymnastics),sport
+Floor Hockey,sport
+Floorball,sport
+Flyboarding,sport
+FootbagFreestyleFootbag Net,sport
+Footbag Net,sport
+FootballAssociation FootballSoccerAmerican Football (Gridiron),sport
+Football Tennisfutnet,sport
+Footgolf,sport
+Footpool,sport
+Footvolley,sport
+Formula Racing,sport
+Four Square,sport
+Carom Billiards Yotsudama,sport
+Freediving,sport
+Freestyle BMX,sport
+Freestyle Footbag,sport
+Freestyle Football,sport
+Freestyle MotocrossMotocross,sport
+Freestyle Skiing,sport
+Freestyle Snowboarding,sport
+Freestyle Swimming,sport
+Freestyle Wrestling,sport
+Matkot,sport
+Fricket,sport
+Frisian Handball,sport
+Frontenis,sport
+Fullbore target rifle,sport
+Table Football,sport
+Futsal,sport
+Fuzzball,sport
+Gaelic Football,sport
+Gaelic Handball,sport
+Gaming,sport
+Gateball,sport
+Giant SlalomSlalomSuper-G,sport
+Gliding,sport
+Glima,sport
+Goalball,sport
+Go-Karting,sport
+Golf,sport
+Gorodki,sport
+Grass Skiing,sport
+Greco-Roman Wrestling,sport
+Dog Racing,sport
+American Football,sport
+Group Gymnastics,sport
+Gutsdisc sport,sport
+Gymkhana,sport
+GymnasticsRhythmic GymnasticsArtistic Gymnastics,sport
+Half-Pipe Skiing,sport
+Hammer throw,sport
+HandballTeam HandballEuropean (Team) handball Beach HandballCzech HandballField Handball,sport
+Hang Gliding,sport
+Hardball Squashsquash,sport
+Harness Racing,sport
+Headis,sport
+Heptathlon,sport
+High Diving,sport
+High Jump,sport
+High Power Rifle,sport
+Hill ClimbHillclimbing,sport
+Hillclimbing,sport
+Hitball,sport
+Ice HockeyField Hockey,sport
+Horizontal BarHigh Bar,sport
+Hornussennut,sport
+Horse PoloElephants,sport
+Horse Racing,sport
+Horse SoccerPushball,sport
+HorseballPato,sport
+Horseshoes,sport
+Ballooning,sport
+Hovercraft Racing,sport
+Hunting,sport
+Hurdles (Track and Field),sport
+Hurling,sport
+Hydroplane Racing,sport
+Ice Canoeing,sport
+Ice Climbing,sport
+Ice Cross Downhill,sport
+Ice DancingFigure Skating,sport
+Ice Hockey,sport
+Ice Racing,sport
+Ice Speedway Motorcycle Speedway Racing,sport
+Ice Skating,sport
+Ice Stock Sport,sport
+Ice Yachting,sport
+Indoor Cricket,sport
+Indoor Field Hockey,sport
+Indoor Netballnetball,sport
+Indoor Soccer,sport
+Inline Hockeyice  hockey,sport
+Inline Skating,sport
+Inline Speed Skating,sport
+Intercrosselacrosse,sport
+International Fronton,sport
+International Game,sport
+International Rules FootballAussie Rules FootballGaelic football,sport
+Irish Road Bowling,sport
+Ironman Surflifesaving,sport
+Jai AlaiBasque  Pelota,sport
+Javelin,sport
+Jereed,sport
+Jet Ski Racing,sport
+Jetsprint,sport
+Jeu Provençal,sport
+Jianzi,sport
+Joggling,sport
+Jokgu,sport
+Jorkyball,sport
+Judo,sport
+Jugger,sport
+Jujutsu,sport
+Jukskei,sport
+Kabaddi,sport
+Karate,sport
+Kart Racing,sport
+Kayaking,sport
+Kegel,sport
+Kelly Pool,sport
+Kemari,sport
+Kendo,sport
+Kho Kho,sport
+Kickball,sport
+Kickboxing Pradal SereySandaSavateSikaran,sport
+Kilikiti,sport
+Kin-Ball,sport
+Ki-o-rahi,sport
+Kite Fighting,sport
+Kite Landboarding,sport
+Kite BoardingKitesurfingKite LandboardingSnowkiting,sport
+Kitesurfing,sport
+Kilikiti,sport
+Klootschieten,sport
+Kneeboarding,sport
+Knife Throwing,sport
+Korfball,sport
+Krachtbal,sport
+Krolf,sport
+Kronum,sport
+Kubb,sport
+Kurash,sport
+Lacrosse Field LacrosseBox LacrosseWomen's Lacrosse,sport
+Lagori,sport
+Land Sailing,sport
+Land Speed Records,sport
+Land WindsurfingWindsurfing,sport
+Lapta –,sport
+Laser Tag,sport
+Lawn Bowls,sport
+Lawn Mower Racing,sport
+Lelo Burti,sport
+Lethwei,sport
+LetterboxingGeoCaching,sport
+Log Rolling,sport
+Long JumpTriple Jump,sport
+Longboarding,sport
+Longue Paumejeu de paume,sport
+Luge,sport
+Lumberjack,sport
+Mallakhamba,sport
+Marathon,sport
+Marching Band,sport
+Martial Arts,sport
+Matkot,sport
+Medieval Football,sport
+Metallic Silhouette Shooting,sport
+Metro Footy,sport
+Mind Sportsspeed cubing,sport
+Minigolf or Miniature GolfGolf,sport
+Mini RugbyRugby  Union,sport
+Mixed Martial Arts (MMA),sport
+Mob FootballMedieval Football,sport
+Modern Pentathlon,sport
+Mogul Skiing,sport
+Mölkky,sport
+Mongolian Wrestling,sport
+Moscow Broomball,sport
+Motoball,sport
+MotocrossFreestyle Motocross,sport
+Motorcycling Road Racing,sport
+Motorcycle GymkhanaAutocross,sport
+Motorcycle SpeedwayMotorsportIce Speedway,sport
+Motorcycle Trials,sport
+Motorsports,sport
+Mountain Biking,sport
+Mountain Unicycling,sport
+MountainboardingDirtboardingOffroad BoardingAll-Terrain Boarding (ATB),sport
+Mountaineering,sport
+Mounted Orienteering,sport
+Muay Thai,sport
+Mud Bogging,sport
+Muggle Quidditch,sport
+Netball,sport
+Newcomb BallVolleyball,sport
+Nine-a-side FootyAustralian Rules Football,sport
+Nine-BallPocket Billiards,sport
+Nine-Man FootballAmerican Football,sport
+Nine Pin Bowling,sport
+Nordic CombinedCross-CountrySkiingSki Jumping,sport
+Nordic SkiingAlpine skiingCross-CountrySkiingSki JumpingBiathlonNordic CombinedTelemark Skiing,sport
+Novuss,sport
+Mountainboarding,sport
+motor sports,sport
+Oil WrestlingwrestlingYağlı Güreş,sport
+Oină –,sport
+One Day International (ODI) CricketTwenty20,sport
+One-PocketPocket Billiards,sport
+Open Water Swimming,sport
+Orienteering,sport
+Field Handball,sport
+Outrigger Canoeing,sport
+Over-the-line,sport
+Tag Rugby,sport
+Paddle Tennis,sport
+Paddleball (1 wall),sport
+Paddleball (4 wall),sport
+Padel,sport
+Paintball,sport
+Palant,sport
+Paleta Frontón,sport
+Pall mall,sport
+Palla,sport
+Pankration (Amateur)Pankration,sport
+Parachutingskydiving,sport
+Para-ClimbingSport Climbing,sport
+Para-Cycling,sport
+Paragliding,sport
+Parallel Bars,sport
+Paralympic Football,sport
+Pärk,sport
+Parkour,sport
+Patball,sport
+PatoPoloBasketballHorseball,sport
+Pehlwani,sport
+Pelota Mixteca,sport
+Pencak Silat,sport
+PesäpalloBaseball,sport
+Pétanque,sport
+Peteca,sport
+Pickleball,sport
+Picigin,sport
+Pigeon Racing,sport
+Table Tennis,sport
+Pitch and Putt,sport
+Pittonpickleballbadminton,sport
+Platform Tennis,sport
+Playboating,sport
+Pocket Billiards PoolCue SportsEight-BallNine-BallTen-BallStraight PoolOne-Pocket Bank Pool,sport
+Pole Climbing,sport
+Pole Dancing,sport
+Pole Vault,sport
+PoloSnow Polo Elephant PoloCycle PoloYak PoloCowboy Polo,sport
+Polocrosse,sport
+Pommel Horse,sport
+Pond Hockey,sport
+cue sportPocket Billiards,sport
+Popinjay,sport
+Power Hockey,sport
+Power Boat Racing,sport
+Powerchair Football,sport
+Powerlifting,sport
+Practical shooting,sport
+Pradal Serey,sport
+bare knuckle boxing,sport
+Pushball,sport
+Qianball,sport
+Quadrathlonquadriathlon,sport
+Muggle Quidditch,sport
+Quoits,sport
+Racerunning,sport
+Race Walking,sport
+Racketlon,sport
+Racquetball,sport
+Racquets / Rackets,sport
+Rafting,sport
+Rallycross,sport
+Rally Racing,sport
+Rally Raid,sport
+Real Tennis,sport
+Rec FootyAustralian  Football,sport
+Reining,sport
+Relay Running,sport
+Relay Swimming,sport
+Rhythmic Gymnastics,sport
+Ringballnetball,sport
+Ringette,sport
+Rings,sport
+Rink BandyBandyRink Ball,sport
+Rink Hockey,sport
+RinkballRink Bandy,sport
+Ritinis,sport
+Road Bicycle Racing,sport
+Road Bowling,sport
+Road Skating,sport
+Robot Combat,sport
+Robot Sports,sport
+Robot Soccer,sport
+RodeoBarrel racingBull Riding,sport
+Rogaining,sport
+Rollball,sport
+Roller Derby,sport
+Roller Hockeyrink hockey inline hockey,sport
+Roller Skating,sport
+Roller Skiing,sport
+Roller Soccer,sport
+Rope Climbing,sport
+Rope Jumping,sport
+Roping,sport
+Roquecroquet,sport
+Rounders,sport
+Rowing,sport
+Rugby Fives,sport
+Rugby League,sport
+Rugby League Nines,sport
+Rugby Sevens,sport
+Rugby Tens,sport
+Rugby Union,sport
+Running,sport
+Russian Pyramidcue sport,sport
+Sailing,sport
+Sambo,sport
+Samoa Rules,sport
+Beach Handball,sport
+Sandboarding,sport
+Sandsurfing,sport
+Sanshou,sport
+Savate,sport
+Sawing,sport
+Schwingen,sport
+Scootering,sport
+Sculling Rowingrowing,sport
+Segway Polo,sport
+Sepak Takraw,sport
+ShintyHurling,sport
+Shinty-HurlingShintyHurling,sport
+Shooting Sports,sport
+Shot put,sport
+Showdownair hockey,sport
+Show Jumping,sport
+Shuffleboard,sport
+Jianzi,sport
+Sikaran,sport
+Sipa,sport
+Sitting Volleyball,sport
+Six-Man Football,sport
+Skateboarding,sport
+Skeet Shootingclay pigeon shooting,sport
+Skeleton,sport
+Ski Archery,sport
+Acroski,sport
+Ski Cross,sport
+Ski Flying,sport
+Ski Jumping,sport
+Ski Mountaineering,sport
+Ski Orienteering,sport
+AirsoftLaser TagPaintball,sport
+Skiboarding,sport
+Skibobbing,sport
+Skiing,sport
+Skijøring,sport
+Skittles,sport
+Parachuting,sport
+Skyrunning,sport
+Skysurfing,sport
+Slalom Skiingalpine  skiingGiant SlalomSuper-G,sport
+Slamball,sport
+Sledge Hockey,sport
+Slopestyle,sport
+Slopestyle Skiing,sport
+Slow-Pitch SoftballSoftball,sport
+weight lifting,sport
+Snooker Cue Sport,sport
+Snowbiking,sport
+Snowboarding,sport
+Boardercross,sport
+SnowboatingSnowkayaking,sport
+Snow Golf,sport
+Snowkiting,sport
+Snowmobile Racing,sport
+Snow PoloPolo on horseback,sport
+Snow Rugby,sport
+Snowshoeing,sport
+Snow Skiing,sport
+Association Football,sport
+Soft Tennis,sport
+Softballfast pitchslow pitch,sport
+Softball Throw,sport
+Sorro Wrestling,sport
+Speed-Ball,sport
+Speedball,sport
+Speedcubing,sport
+Speed Golf,sport
+Speedminton,sport
+cue sport,sport
+Speed Skating (Long Track),sport
+Speed Skating (Short Track),sport
+Speed Skiing,sport
+Motorcycle SpeedwayIce SpeedwayBicycle Speedway,sport
+Spongee,sport
+Acrobatic Gymnastics,sport
+Sport Aerobics,sport
+Sport ClimbingLead ClimbingSpeed ClimbingBouldering,sport
+Sport Diving,sport
+Sport Fishing,sport
+Sport Kite,sport
+Sport Stacking,sport
+Sporting Claysclay pigeon shooting,sport
+Sports Car Racing,sport
+Sprint (Athletics),sport
+Sprint Car Racing,sport
+Sprint Football,sport
+Squash,sport
+Squash Tennis,sport
+Squatpowerlifting event,sport
+Ssireum,sport
+Steeplechase,sport
+Steeplechasehorse racing,sport
+Stické  Tennis,sport
+Stock Car Racing,sport
+Stoolball,sport
+Straight poolpocket billiards,sport
+Street HockeyIce Hockey,sport
+Streetluge,sport
+Strongman,sport
+Sumo Wrestling,sport
+Super Giant Slalom,sport
+SupercrossMotocross,sport
+Supermoto,sport
+Surf Kayaking,sport
+Surfboat Rowing,sport
+Surfing,sport
+Surf Lifesaving,sport
+Swamp Football,sport
+Sweep Rowing,sport
+Swimming,sport
+Synchronized Diving,sport
+Synchronized Skatingfigure skating,sport
+Synchronized Swimming,sport
+Table Football,sport
+Table Tennis,sport
+Taekwondo,sport
+Tag RugbyTouch RugbyFlag RugbyOzTagMini TagAmerican flag rugby,sport
+Tamburello,sport
+Target ArcheryArchery,sport
+Target Shooting,sport
+Tee-Ball,sport
+Tchoukball,sport
+Handball,sport
+Team Penning,sport
+Te Ano,sport
+Tejo,sport
+Telemark Skiing,sport
+Tennikoit,sport
+Tennis,sport
+Tennis Polo,sport
+Tenpin Bowling,sport
+Tent Pegging,sport
+Test Cricket,sport
+Tetherball,sport
+Thoroughbred Racing,sport
+Three-Cushion Billiardscue sport,sport
+ThrowballNewcomb Ball,sport
+Torball,sport
+Toros Coleados,sport
+Touch Football,sport
+Touch Rugby,sport
+Tower Running,sport
+Track Cycling,sport
+Track & Field,sport
+Trampolining,sport
+Trap Shootingclay pigeon shooting,sport
+TREC,sport
+Tree Climbing,sport
+Triathle,sport
+Triathlon,sport
+Triple jumplong jump,sport
+Trugo,sport
+Tug of War,sport
+Tumbling,sport
+Twenty20,sport
+Ulama,sport
+Ultimate,sport
+Ultralight Aviation,sport
+Ultramarathon,sport
+UnderwaterFootball,sport
+Underwater Hockey,sport
+Underwater Ice HockeyIce Hockey,sport
+Underwater Orienteering,sport
+Underwater Photography,sport
+Underwater Rugby,sport
+Underwater Target Shooting,sport
+Aquathlon,sport
+Uneven Bars,sport
+Unicycle Basketball,sport
+Unicycle Handball,sport
+Unicycle Hockey,sport
+Unicycling Racing,sport
+Unicycle Trials,sport
+Unicycling,sport
+Urban Golf,sport
+Vajra-mushti,sport
+Valencian FrontóValencian PilotaBasque Pelota,sport
+Valencian PilotaBasque PelotaValencian Frontó,sport
+Varpa,sport
+Varzesh-e BastaniZourkhaneh Varzesh-e Pahlavani,sport
+Vault,sport
+Vert Skateboarding,sport
+Vert Skating,sport
+VigoroCricketBaseball,sport
+VolleyballBeach VolleyballThrowballNewcomb Ball,sport
+Vovinam,sport
+Vx,sport
+Wakeboarding,sport
+Walking Football,sport
+Wallball,sport
+Wallyball,sport
+Washer Pitching,sport
+Water Basketball,sport
+Water Polo,sport
+Water Skiing,sport
+Water Volleyball,sport
+Weightlifting,sport
+Weight Throw,sport
+Western Pleasure,sport
+Wheelchair Basketball,sport
+Wheelchair Curling,sport
+Wheelchair Dancing,sport
+Wheelchair FencingFencing,sport
+Wheelchair Racing,sport
+Wheelchair Rugby,sport
+Wheelchair Rugby League,sport
+Wheelchair Tennis,sport
+Whitewater Slalomkayakingcanoeing,sport
+WiffleballBaseball,sport
+Windsurfing,sport
+Wingsuit Flying,sport
+Winter Guard,sport
+Winter Triathlon,sport
+Women's lacrosselacrosse,sport
+WoodballBeach Woodball,sport
+Wood Chopping,sport
+WrestlingGreco-RomanFreestyleSumoYağlı GüreşAquathlonArm Wrestling,sport
+Wushu,sport
+XareBasque pelota,sport
+not a sport,sport
+Yağlı Güreşgrease wrestlingwrestling, sport
+Yak PoloPolo,sport
+Yotsudama,sport
+Yubi Lakpi,sport
+Yukigassen,sport
+Zorb Football,sport
+Varzesh-e Bastani,sport
+Drunken Boxing,sport
+What is a sport?,sport
+Questionable Sports,sport
+unusual sports,sport
+team sports,sport
+National Sports,sport
+Newly invented sports,sport
+Extinct Sports,sport
+Blood Sports,sport
+Hockey Sports,sport
+Racket Sports,sport
+Multi-Sports,sport
+Underwater Sports,sport
+Shooting Sports,sport
+Beach Sports,sport
+Bowling Sports,sport
+Motorcycle Sports,sport
+Roller Sports,sport
+Summer Olympic Sports,sport
+Winter Olympic Sports,sport
+suggested sports,sport

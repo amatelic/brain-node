@@ -1,0 +1,43 @@
+var UserSerializer = new JSONAPISerializer('users', {
+  id: '_id',
+  attributes: ['tasks', 'messages','name', 'username', 'image', 'plan', 'auth', 'email'],
+  tasks: {
+    ref: 'id',
+    included: false,
+    attributes: ['addressLine1', 'zipCode', 'country'],
+    includedLinks: {
+      self: 'http://localhost:4000/users/1/includedlinks'
+    },
+    relationshipLinks: {
+      related: 'http://localhost:4000/users/1/addresses'
+    }
+  },
+  messages: {
+    ref: 'id',
+    included: false,
+    attributes: ['addressLine1', 'zipCode', 'country']
+  },
+});
+
+router.get('/users/:id', function (req, res) {
+  const id = req.params.id;
+    User.findOne({_id: id}).then(user => {
+      user = user.toObject();
+      user.tasks = {
+          id: '54735697e16624ba1eee36bf',
+          addressLine1: '361 Shady Lane',
+          zipCode: '23185',
+          country: 'USA'
+      };
+      user.messages = {
+          id: '54735697e16624ba1eee36bf',
+          addressLine1: '361 Shady Lane',
+          zipCode: '23185',
+          country: 'USA'
+      };
+      console.log(UserSerializer.serialize(user).data.relationships)
+      //console.log(UserSerializer.serialize(user))
+      // console.log(UserSerializer.serialize(user))
+      res.json(UserSerializer.serialize(user).data.relationships);
+    }).catch(e => console.log(e));
+});

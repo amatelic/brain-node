@@ -1,0 +1,42 @@
+html
+  head
+  link(rel="stylesheet", href="http://localhost:5000/public/bootstrap/dist/css/bootstrap.css")
+  link(rel="stylesheet", href="http://localhost:5000/public/bootstrap/dist/css/sb-admin.css")
+  script(src="http://localhost:5000/public/jquery/dist/jquery.min.js")
+  script(src="http://localhost:5000/public/d3/d3.min.js")
+  script(src="http://localhost:5000/public/bootstrap/dist/js/bootstrap.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js")
+  body
+    div(id="wrapper")
+      include partials/nav
+      #page-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              .form-group
+                label(for="") Five stages
+              hr
+              .row
+                .col-lg-4
+                  .panel.panel-default
+                    .panel-heading
+                      h3.panel-title
+                        i.fa.fa-money.fa-fw
+                        |  Five stages
+                    .panel-body
+                      svg(width="300px" height="300px" id="chart")
+                .row
+                  .col-lg-4
+                    .panel.panel-default
+                      .panel-heading
+                        h3.panel-title
+                          i.fa.fa-money.fa-fw
+                          |  All my Active tasks
+                      .panel-body
+                        ul
+                          each task, index in active
+                            li= task
+      script(src="http://localhost:5000/public/lib/circle.js")
+      script.
+        dataset= JSON.parse(!{JSON.stringify(tasks)});
+        circle(d3, dataset)

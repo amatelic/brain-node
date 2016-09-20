@@ -1,0 +1,54 @@
+{
+    "_id" : ObjectId("57d80549a0aa4c6d3549c09c"),
+    "years" : [
+        [
+            {
+                "year" : 2016,
+                "month" : 9,
+                "date" : [
+                    [
+                        {
+                            "days" : [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "times" : [
+                                1200,
+                                1200,
+                                1200,
+                                1200,
+                                1200,
+                                1200,
+                                1200
+                            ],
+                            "complited" : [
+                                1,
+                                0,
+                                1,
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            "tracking" : [
+                                true,
+                                false,
+                                true,
+                                false,
+                                true,
+                                false,
+                                false
+                            ]
+                        }
+                    ]
+                ]
+            }
+        ]
+    ],
+    "__v" : 0
+}

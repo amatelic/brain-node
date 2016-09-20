@@ -1,0 +1,19 @@
+html
+  head
+    link(rel="stylesheet", href="./public/bootstrap/dist/css/bootstrap.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js")
+  body
+    ul
+  script.
+    var data= !{JSON.stringify(tasks)};
+    let tracked = data;
+    let all = []
+    tracked.months.September.forEach(d => {
+      console.log(d.schedule)
+      console.log(d[`week${1}`])
+    })
+
+    //- var div = document.createElement("div");
+    //- var textForButton = document.createTextNode(`${complited} - ${whole}`);
+    //- div.appendChild(textForButton);
+    //- body.appendChild(div)
