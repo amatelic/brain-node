@@ -18,7 +18,7 @@ var UserSerializer = new JSONAPISerializer('users', {
 
 var MessageSerializer = new JSONAPISerializer('messages', {
   id: '_id',
-  attributes: ['title', 'message', 'status', 'image'],
+  attributes: ['title', 'message', 'status', 'image', 'author'],
 });
 
 /**

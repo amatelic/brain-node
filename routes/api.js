@@ -11,7 +11,6 @@ const {TaskSerializer, UserSerializer, TaskDeserializer,
 
 var router = express.Router();
 
-
 router.get('/users/:id', function (req, res) {
   const id = req.params.id;
   User.findOne({_id: id}).then(user => {
@@ -71,49 +70,55 @@ router.post('/token', function(req, res) {
   });
 });
 
+router.patch('/tasks/:id', function (req, res) {
+  CommonManager.getPostData(req, res)
+    .then(data => TaskDeserializer.deserialize(data))
+    .then(data => {
+      let id = '57d8054a2813b26d3a2e5189';
+      let month = moment().month();
+      let year = moment().year();
+      let name = data.name.replace(' ', '_');
+      //Create object for changing days in month
+      var $set = { $set: {} };
+      $set.$set['days.' + (data.id - 1) +'.days'] = data.days;
+      //query
+      Task.update({_userId: id, month, year, days: {$elemMatch: {name}}}, $set)
+      .then(task => { res.status(204).json({})});
+    }).catch(err => console.log(err));
+});
+
 router.post('/tasks', function (req, res) {
-  CommonManager.getPostData(req, res, function (data) {
+  CommonManager.getPostData(req, res).then(data => {
     let id = '57d8054a2813b26d3a2e5189'; //|  req.get('api-key');
     let month = parseInt(data.month);
     let year = parseInt(data.year);
     delete data.user;
-    Task.update({ _userId: id, year, month }, { $push: { days: data }}, function(err, data) {
-      console.log(err, data)
-      res.status(204).json({});
-    });
+    Task.update({ _userId: id, year, month }, { $push: { days: data }})
+    .then(data => res.status(204).json({}));
   });
-
-
-  // DB.update('user', {
-  //   email,
-  //   'directories.name': `${directory}`
-  // },{
-  //   $push: {
-  //     'directories.$.music':  data,
-  // }});
-
-  // Task.findOne({_userId: id, month: 8}).then(tasks => {
-  //   // let data = convertData(d.toObject(), 8, 2016);
-  //   res.json(TaskSerializer.serialize(tasks));
-  // }).catch(d => console.log(d));
 });
 
 router.get('/tasks', function (req, res) {
-  let month = (Object.keys(req.query).length) ? req.query.filter.month - 1 : 8;
+  let month = (Object.keys(req.query).length) ? req.query.filter.month: 8;
   let id = '57d8054a2813b26d3a2e5189';
   Task.findOne({_userId: id, month}).then(tasks => {
-    // let data = convertData(d.toObject(), month, 2016);
-    res.json(TaskSerializer.serialize(tasks.days));
+    if (tasks) {
+      return res.json(TaskSerializer.serialize(tasks.days));
+    }
+    return res.json({data: []});
   }).catch(dataBaseError);
 });
 
 router.get('/tasks/:id', urlEncoder, function (req, res) {
-  let userId = req.params.id;
+  let userId = parseInt(req.params.id);
   let month = (Object.keys(req.query).length) ? req.query.filter.month : 8;
   let id = '57d8054a2813b26d3a2e5189';
   Task.findOne({_userId: id, month}).then(tasks => {
-    tasks = tasks.toObject().days[userId - 1],
-    res.json(TaskSerializer.serialize(tasks));
+    if (tasks) {
+      tasks = tasks.toObject().days[userId -1];
+      return res.json(TaskSerializer.serialize(tasks));
+    }
+    res.json(TaskSerializer.serialize({meta: {title: 'No mored data.'}, data: []}));
   }).catch(dataBaseError);
 });
 

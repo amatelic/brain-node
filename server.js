@@ -5,6 +5,7 @@ const api = require('./routes/api');
 const file = require('./routes/file');
 const {appLog} = require('./app/config/logger');
 const path = require('path');
+const moment = require('moment');
 const bodyParser = require('body-parser');
 const CONFIG = require('./app/config/app');
 let app = express();
@@ -22,6 +23,7 @@ function webPageNotFound(req, res, next) {
  */
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.locals.moment =  moment;
 app.use(bodyParser.json());
 
 app.set('view engine', 'jade');

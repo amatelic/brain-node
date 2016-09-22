@@ -6,6 +6,8 @@ let Message =  Schema({
   message : String,
   _userId: { type: Schema.Types.ObjectId, ref: 'User' },
   image: String,
+  author: String,
+  created: String,
   status : String,
 });
 

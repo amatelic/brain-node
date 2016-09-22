@@ -37,6 +37,8 @@ function create(user, message) {
     message: 'Without any practice you will not succede.',
     status: true,
     image: 'bad.jpg'
+    created: '',
+    author: ''
   };
   let data = Object.assign({userId: id}, userMessage);
   let created = new Message(data);
@@ -49,7 +51,7 @@ function create(user, message) {
   });
 
 }
-send();
+// send();
 // create();
 module.exports  = {
   send,

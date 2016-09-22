@@ -1,73 +1,74 @@
 const _ = require('lodash');
 const synaptic = require('synaptic');
 const Graph = require('./graph');
-const Layer = synaptic.Layer;
-const Network = synaptic.Network;
+const {trainingData, options} = require('../data/network');
 const Architect = synaptic.Architect;
+const natural = require('natural');
+let habits = ['health','learn', 'social', 'creativity','sport'];
+let obj = { sport: 0, health: 0, learn: 0, social: 0, creativity: 0 };
+const classifier = new natural.BayesClassifier();
 var stagesNet = new Architect.Perceptron(5, 7, 5);
 
-var trainingSet = [
-  {
-    input: [0, 1, 0, 0, 1],
-    output: [0, 0, 1, 0, 0]
-  },
-  {
-    input:  [1, 0, 0, 0, 1],
-    output: [0, 1, 0, 0, 0]
-  },
-  {
-    input:  [0, 0, 1, 0, 1],
-    output: [0, 0, 0, 1, 0]
-  },
-  {
-    input:  [0, 0, 1, 1, 0],
-    output: [0, 0, 0, 0, 1]
-  },
-  {
-    input:  [0, 1, 0, 1, 0],
-    output: [1, 0, 0, 0, 0]
-  }
-];
 
-var trainingOptions = {
-  rate: .1,
-  iterations: 20000,
-  error: .005,
+stagesNet.trainer.train(trainingData, options);
+let result = stagesNet.activate([1,0,1,0,0]);
+let index = getMaxIndex(result);
+
+
+function getMaxIndex(collection) {
+  return collection.indexOf(Math.max(...collection))
 }
 
-stagesNet.trainer.train(trainingSet, trainingOptions);
-let habits = ['health','learning', 'social', 'crativity','sport'];
-let result = stagesNet.activate([1,0,1,0,0]);
-let index = result.indexOf(Math.max(...result));
+function convertToBinaryStages(data) {
+  return habits.map(label => data[label]);
+}
 
-
+/**
+ * Function for recomending new habit with neural networks
+ * @param {array} data  -> data has to be binary form [0, 1, 0, 1]
+ * @return {String}
+*/
 function newHabit(data) {
-  let result = stagesNet.activate([1,0,1,0,0]);
-  let index = result.indexOf(Math.max(...result));
+  let result = stagesNet.activate(data);
+  let index = getMaxIndex(result);
   return habits[index];
 }
 
-let obj = { sport: 0, health: 0, learn: 0, social: 0, creativity: 0 };
 
+/**
+ * Function for classifing data and returning
+ * @result {sport: 0, health: 0, creativity: 0, learn: 0, social: 0}
+ * @param {array} data
+ * @param {classification object} classifier
+ * @return {Object}
+ */
 function stages(data, classifier) {
   return data.reduce((p, n) => {
     let category = classifier.classify(n);
     p[category]++;
     return p;
-  }, obj);
+  }, _.cloneDeep(obj));
 }
 
-function newSkill(data, size) {
-  let procantage = {};
-  let total = _.toArray(data).reduce((p, n) => p + n, 0);
-  for (type in data) {
-    procantage[type] = (data[type] * 100) / total
-  }
-  // console.log(procantage)
+/**
+ * Method for getting stage classification
+ * @param {array} data
+ * @return {Promise< Object >}
+ */
+function stageClassifier(data) {
+  return new Promise((resolve, rejected) => {
+    natural.BayesClassifier.load('./five.json', null, function(err, classifier) {
+      if (err) {
+        rejected(err);
+      }
+      resolve(stages(data, classifier));
+    });
+  });
 }
 
 module.exports = {
   stages,
-  newSkill,
   newHabit,
+  stageClassifier,
+  convertToBinaryStages
 };

@@ -1,11 +1,12 @@
 var express = require('express');
 const lda = require('lda');
-const fs = require('fs');
+const fs = require('mz/fs');
 const request = require('request');
 const natural = require('natural');
+const Brain = require('../machineLearning/stages');
 const tokenizer = new natural.WordTokenizer();
 const classifier = new natural.BayesClassifier();
-const {User, Task} = require('../db/db');
+const {User, Task, Message} = require('../db/db');
 const _ = require('lodash');
 var router = express.Router();
 
@@ -15,66 +16,53 @@ router.use(function timeLog(req, res, next) {
 });
 // define the home page route
 router.get('/', function(req, res) {
-  User.find({ "email" : "amatelic93@gmail.com"}, (err, user) =>  {
-    Task.findById(user[0].data, (err, tasks) => {
-      res.render('learning/index', {
-        user: user[0],
-        tasks: tasks.toObject()
-      });
-    });
-
-  });
+  User.findOne({ "email" : "amatelic93@gmail.com"}).then(user => {
+      return Promise.all([
+        Promise.resolve(user),
+        Task.findOne({_userId: user._id}),
+        Message.find({_userId: user._id}),
+    ]);}).then(data => {
+      let tasks = data[1].toObject();
+      let active = tasks.tasks.active.map(d => d.replace('_', ' '));
+      return Brain.stageClassifier(active).then(stages => {
+        let binaryData = Brain.convertToBinaryStages(stages);
+        let newSkill = Brain.newHabit(binaryData);
+        res.render('learning/index', {
+          user: data[0], messages: data[2],
+          tasks, stages, newSkill
+        });
+      })
+    }).catch(err => {console.log(err, 1)})
 });
 // define the about route
 router.get('/machine', function(req, res) {
-  // var text = 'Cats are small. Dogs are big. Cats like to chase mice. Dogs like to eat bones.';
-  // ldaData = lda(tokenizer.tokenize(text), 3, 5);
-  fs.readFile('./files/text/pickup.txt', 'utf8',(err, text) => {
-    User.find({ "email" : "amatelic93@gmail.com"},(err, user) => {
-      ldaData = lda(tokenizer.tokenize(text), 3, 5);
+  Promise.all([
+    fs.readFile('./files/text/pickup.txt', 'utf8'),
+    Promise.resolve(User.findOne({ "email" : "amatelic93@gmail.com"}))
+  ]).then(data => {
+      ldaData = lda(tokenizer.tokenize(data[0]), 3, 5);
       res.render('learning/lda', {
-        user: user[0],
-        ldaData,
-        text
+        user: data[1], ldaData, text: data[0]
       });
-    });
-  });
+    }).catch(d => console.log(d));
 });
 
 router.get('/fiveStages', function(req, res) {
-  User.find({ "email" : "amatelic93@gmail.com"}, (err, user) =>  {
-    Task.findById(user[0].data, (err, tasks) => {
-      let data = tasks.toObject();
-      let active = data.tasks.active.map(d => d.replace('_', ' '));
-      getTypes(active, (data) => {
+  User.findOne({ "email" : "amatelic93@gmail.com"})
+    .then(user => Promise.all([
+      Promise.resolve(user),
+      Task.findOne({_userId: user._id, year: 2016, month: 8})
+    ])).then(data => {
+      let tasks = data[1].toObject();
+      let active = tasks.tasks.active.map(d => d.replace('_', ' '));
+      Brain.stageClassifier(active).then(tasks => {
         res.render('learning/five', {
-          user: user[0],
-          tasks: data,
+          user: data[0],
+          tasks: tasks,
           active: active.map(d => d.replace('_', ' ')),
         });
-      });
-    });
-  });
+      })
+    }).catch(err => console.log(err));
+
 });
 module.exports = router;
-
-function getTypes(data, callback) {
-  natural.BayesClassifier.load('./five.json', null, function(err, classifier) {
-  let obj = {
-    'sport': 0,
-    'health': 0,
-    'learn': 0,
-    'social': 0,
-    'creativity': 0,
-    };
-    //create object
-    let types= data.reduce((p, n) => {
-      console.log(n, classifier.classify(n))
-      let category = classifier.classify(n);
-      p[category]++;
-      return p;
-    }, obj);
-    console.log(types)
-    callback(JSON.stringify(types));
-  })
-}

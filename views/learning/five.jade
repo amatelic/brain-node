@@ -36,7 +36,8 @@ html
                         ul
                           each task, index in active
                             li= task
+                            
       script(src="http://localhost:5000/public/lib/circle.js")
       script.
-        dataset= JSON.parse(!{JSON.stringify(tasks)});
+        dataset= JSON.parse(!{`'${JSON.stringify(tasks)}'`});
         circle(d3, dataset)
