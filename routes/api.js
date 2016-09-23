@@ -1,10 +1,9 @@
 const _ = require('lodash');
 const express = require('express');
-const bodyParser = require('body-parser');
 const moment = require('moment');
-const urlEncoder = bodyParser.urlencoded({ extended: false });
-const json = bodyParser.json();
-const {User, Task, Message} = require('../db/db');
+const urlEncoder = require('body-parser').urlencoded({ extended: false });
+const {addMeta, ErrorMessage} = require('../helpers/helpers');
+const {User, Task, Message, Quote} = require('../db/db');
 const {setUrl, CommonManager} = require('../helpers/helpers');
 const {TaskSerializer, UserSerializer, TaskDeserializer,
   MessageSerializer, relationshipsFix } = require('../app/adapters/json-api');
@@ -13,12 +12,22 @@ var router = express.Router();
 
 router.get('/users/:id', function (req, res) {
   const id = req.params.id;
-  User.findOne({_id: id}).then(user => {
-    user = UserSerializer.serialize(user.toObject());
-    //Fix for relationship adding
+  Promise.all([
+    User.findOne({_id: id}),
+    Quote.random()
+  ]).then(data => {
+    user = UserSerializer.serialize(data[0].toObject());
+    user = addMeta(user, {meta: data[1]});
+    //Bug fix for relations
     user.data.relationships = relationshipsFix(id);
     res.json(user);
   }).catch(e => console.log(e));
+});
+
+router.patch('/users/:id', function (req, res) {
+  CommonManager.getPostData(req, res).then(data => {
+    res.status(204).json({data: []});
+  });
 });
 
 router.get('/messages/:id', function (req, res) {
@@ -42,20 +51,15 @@ function getUserData(user, tasks, callback) {
   });
 }
 
-router.post('/register', bodyParser.urlencoded({ extended: true }), function (req, res) {
+router.post('/register', urlEncoder, function (req, res) {
   let {email, password} = req.body;
-  Task.findOne({email}).then(user => {
-    if (user) {
-      return res.json({text: 'Sorry the user already exsists'});
-    }
+  User.findOne({email}).then(user => {
+    if (user) return res.json({text: 'Sorry the user already exsists'});
+
     var newUser = new User(req.body);
-    newUser.save(err => console.log(err));
-    var story1 = new Task({
-      year: 2016,
-      month: 08,
-      _userId: newUser._id    // assign the _id from the person
-    });
-    story1.save(err => console.log(err));
+    newUser.save(ErrorMessage);
+    var story = new Task({_userId: newUser._id,});
+    story.save(ErrorMessage);
     return res.json({text: 'User was created.'});
   });
 });
@@ -64,7 +68,7 @@ router.post('/token', function(req, res) {
   let {username, password} = req.body;
   User.findOne({email: username}).then(user => {
     res.json({
-      'access_token': user.email,
+      'access_token': user._id,
       'user_id': user._id
     });
   });
@@ -74,7 +78,7 @@ router.patch('/tasks/:id', function (req, res) {
   CommonManager.getPostData(req, res)
     .then(data => TaskDeserializer.deserialize(data))
     .then(data => {
-      let id = '57d8054a2813b26d3a2e5189';
+      let id = req.get('api-key');
       let month = moment().month();
       let year = moment().year();
       let name = data.name.replace(' ', '_');
@@ -89,18 +93,22 @@ router.patch('/tasks/:id', function (req, res) {
 
 router.post('/tasks', function (req, res) {
   CommonManager.getPostData(req, res).then(data => {
-    let id = '57d8054a2813b26d3a2e5189'; //|  req.get('api-key');
-    let month = parseInt(data.month);
-    let year = parseInt(data.year);
-    delete data.user;
-    Task.update({ _userId: id, year, month }, { $push: { days: data }})
-    .then(data => res.status(204).json({}));
-  });
+    return TaskDeserializer.deserialize(data).then(data => {
+      let id = req.get('api-key'); //|  req.get('api-key');
+      data.month = parseInt(data.month);
+      data.year = parseInt(data.year);
+      data.id = parseInt(data.id);
+      delete data.user;
+      Task.update({ _userId: id, year: data.year, month:data.month }, { $push: { days: data }})
+      .then(data => res.status(204).json({}));
+    });
+  }).catch(err => console.log(err));
 });
 
 router.get('/tasks', function (req, res) {
   let month = (Object.keys(req.query).length) ? req.query.filter.month: 8;
-  let id = '57d8054a2813b26d3a2e5189';
+  let id = req.get('api-key');
+  console.log(2, req.header)
   Task.findOne({_userId: id, month}).then(tasks => {
     if (tasks) {
       return res.json(TaskSerializer.serialize(tasks.days));
@@ -111,15 +119,16 @@ router.get('/tasks', function (req, res) {
 
 router.get('/tasks/:id', urlEncoder, function (req, res) {
   let userId = parseInt(req.params.id);
-  let month = (Object.keys(req.query).length) ? req.query.filter.month : 8;
-  let id = '57d8054a2813b26d3a2e5189';
-  Task.findOne({_userId: id, month}).then(tasks => {
+  let month = (Object.keys(req.query).length) ? req.query.filter.month : moment().month();
+  let year = (Object.keys(req.query).length) ? req.query.filter.year : moment().year();
+  let id = req.get('api-key');
+  Task.findOne({_userId: id, month, year}).then(tasks => {
     if (tasks) {
       tasks = tasks.toObject().days[userId -1];
       return res.json(TaskSerializer.serialize(tasks));
     }
     res.json(TaskSerializer.serialize({meta: {title: 'No mored data.'}, data: []}));
-  }).catch(dataBaseError);
+  }).catch(d => console.log(d));
 });
 
 function dataBaseError(err) {

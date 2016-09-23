@@ -57,7 +57,7 @@ function stages(data, classifier) {
  */
 function stageClassifier(data) {
   return new Promise((resolve, rejected) => {
-    natural.BayesClassifier.load('./five.json', null, function(err, classifier) {
+    natural.BayesClassifier.load('./stages.json', null, function(err, classifier) {
       if (err) {
         rejected(err);
       }

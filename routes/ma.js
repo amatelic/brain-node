@@ -14,12 +14,14 @@ router.use(function timeLog(req, res, next) {
   console.log('Time: ', Date.now());
   next();
 });
+
+//creating function for working with no data from database
 // define the home page route
 router.get('/', function(req, res) {
   User.findOne({ "email" : "amatelic93@gmail.com"}).then(user => {
       return Promise.all([
         Promise.resolve(user),
-        Task.findOne({_userId: user._id}),
+        Task.findOne({_userId: user._id, month: 8}),
         Message.find({_userId: user._id}),
     ]);}).then(data => {
       let tasks = data[1].toObject();

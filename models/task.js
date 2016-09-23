@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
+const moment = require('moment');
 var Schema = mongoose.Schema;
 
 let Task =  Schema({
-  year: Number,
-  month: Number,
+  year: { type: Number, default: moment().year() },
+  month: { type: Number, default: moment().month() },
   _userId: { type: Schema.Types.ObjectId, ref: 'User' },
   days: []
 });

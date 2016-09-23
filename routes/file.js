@@ -2,13 +2,11 @@ var express = require('express');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const {addMeta} = require('../helpers/helpers');
+const {Quote} = require('../db/db');
 var router = express.Router();
+const { QuoteSerializer, UserSerializer } = require('../app/adapters/json-api');
 
-// middleware that is specific to this router
-router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
-  next();
-});
 // define the home page route
 router.get('/', function(req, res) {
   fs.readFile(path.resolve(__dirname, '../files/09.csv'), 'utf-8', (err, data) => {
@@ -20,10 +18,7 @@ router.get('/', function(req, res) {
         return tasksObject(i, true, d)
       });
       return {
-        name: columns[0],
-        year: 2016,
-        month: 8,
-        days,
+        name: columns[0], year: 2016, month: 8, days,
         "schedule" : [true,true,true,true,true,true,true],
     };
     });

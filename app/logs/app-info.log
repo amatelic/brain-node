@@ -18,3 +18,28 @@
 {"level":"info","message":"Server error -> SyntaxError: /Users/amatelic/Code/api/views/learning/index.jade:20\n    18|                     .col-xs-9.text-right\n    19|                       .huge 26\n  > 20|                       div= Sports #{stages.sport}\n    21|                 a(href='#')\n    22|                   .panel-footer\n    23|                     span.pull-left View Details\n\nUnexpected token ILLEGAL","timestamp":"2016-09-22T00:38:50.386Z"}
 {"level":"info","message":"Server error -> SyntaxError: /Users/amatelic/Code/api/views/learning/index.jade:20\n    18|                     .col-xs-9.text-right\n    19|                       .huge 26\n  > 20|                       div= Sports #{stages.sport}\n    21|                 a(href='#')\n    22|                   .panel-footer\n    23|                     span.pull-left View Details\n\nUnexpected token ILLEGAL","timestamp":"2016-09-22T00:38:52.446Z"}
 {"level":"info","message":"Server error -> SyntaxError: /Users/amatelic/Code/api/views/learning/index.jade:20\n    18|                     .col-xs-9.text-right\n    19|                       .huge 26\n  > 20|                       div=  #{stages.sport}\n    21|                 a(href='#')\n    22|                   .panel-footer\n    23|                     span.pull-left View Details\n\nUnexpected token ILLEGAL","timestamp":"2016-09-22T00:39:01.382Z"}
+{"level":"info","message":"Server error -> ReferenceError: Objcet is not defined","timestamp":"2016-09-22T16:30:10.214Z"}
+{"level":"info","message":"Server error -> ReferenceError: Objcet is not defined","timestamp":"2016-09-22T16:30:12.127Z"}
+{"level":"info","message":"Server error -> ReferenceError: Objcet is not defined","timestamp":"2016-09-22T16:30:14.824Z"}
+{"level":"info","message":"Server error -> ReferenceError: Objcet is not defined","timestamp":"2016-09-22T16:30:17.211Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:57:28.478Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:57:34.950Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:57:36.134Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:57:56.247Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:57:58.979Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:00.449Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:01.402Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:02.184Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:53.467Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:57.302Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:58:58.110Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:20.287Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:22.093Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:24.787Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:40.210Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:42.013Z"}
+{"level":"info","message":"Server error -> TypeError: Cannot read property 'random' of undefined","timestamp":"2016-09-22T16:59:43.171Z"}
+{"level":"info","message":"Server error -> ReferenceError: id is not defined","timestamp":"2016-09-22T18:55:46.380Z"}
+{"level":"info","message":"Server error -> ReferenceError: id is not defined","timestamp":"2016-09-22T19:28:09.555Z"}
+{"level":"info","message":"Server error -> ReferenceError: id is not defined","timestamp":"2016-09-22T19:28:32.575Z"}
+{"level":"info","message":"Server error -> ReferenceError: id is not defined","timestamp":"2016-09-22T19:29:18.650Z"}

@@ -8,8 +8,7 @@ const healthy = './data/five/healthy.txt';
 const learn = './data/five/learn.txt';
 function getAllData() {
   return Promise.all([getData(sport), getData(creativity), getData(social),
-    getData(healthy), getData(learn),
-  ]).then(d => {
+    getData(healthy), getData(learn)]).then(d => {
     return data = d.reduce((p, n) => {
       let data = _.concat(p, n);
       return data;
@@ -35,5 +34,4 @@ function getData(path) {
 module.exports = {
   getData,
   getAllData,
-  CommonManager,
 };

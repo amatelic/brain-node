@@ -13,12 +13,18 @@ var TaskSerializer = new JSONAPISerializer('tasks', {
 
 var UserSerializer = new JSONAPISerializer('users', {
   id: '_id',
+  meta: { quote: '', author: ''},
   attributes: ['tasks', 'messages','name', 'username', 'image', 'plan', 'auth', 'email'],
 });
 
 var MessageSerializer = new JSONAPISerializer('messages', {
   id: '_id',
   attributes: ['title', 'message', 'status', 'image', 'author'],
+});
+
+var QuoteSerializer = new JSONAPISerializer('quotes', {
+  id: '_id',
+  attributes: ['quote', 'author'],
 });
 
 /**
@@ -65,5 +71,6 @@ module.exports = {
   UserSerializer,
   MessageSerializer,
   TaskDeserializer,
-  relationshipsFix
+  relationshipsFix,
+  QuoteSerializer
 };

@@ -8,6 +8,21 @@ function errors(err) {
   }
 }
 
+/**
+ * Function for adding meta data to JSON-api
+ * @param {Object} data
+ * @param {Object} meta
+ * @return {Object}
+ */
+function addMeta (data, meta) {
+  return Object.assign(data, meta);
+}
+
+
+function ErrorMessage(err) {
+  console.log(err);
+}
+
 function setUrl(obj, key) {
   if (typeof obj.toObject === 'function') {
     obj = obj.toObject();
@@ -18,6 +33,7 @@ function setUrl(obj, key) {
 
 let CommonManager = {
   getPostData: function (req, res) {
+    //Convert api to promise based api
     return new Promise((resolve, reject) => {
       // Check if this is a form post or a stream post via REST client.
       if (req.readable) {
@@ -32,9 +48,7 @@ let CommonManager = {
           content += data;
         });
         req.on('end', function () {
-          // Return the posted data.
-          // JSON.parse(data)
-          // console.log(conten)
+          // Return the posted data in JSON format.
           resolve(JSON.parse(content));
         });
       } else {
@@ -44,9 +58,10 @@ let CommonManager = {
   }
 }
 
-
 module.exports = {
   errors,
   setUrl,
-  CommonManager
+  CommonManager,
+  addMeta,
+  ErrorMessage
 }
