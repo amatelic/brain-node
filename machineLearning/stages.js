@@ -1,6 +1,5 @@
 const _ = require('lodash');
 const synaptic = require('synaptic');
-const Graph = require('./graph');
 const {trainingData, options} = require('../data/network');
 const Architect = synaptic.Architect;
 const natural = require('natural');
