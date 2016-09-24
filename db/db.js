@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const UserScheme = require('../models/user');
 const TaskScheme = require('../models/task');
+const UserScheme = require('../models/user');
 const MessageScheme = require('../models/message');
 const QuoteScheme = require('../models/quote');
 mongoose.Promise = global.Promise;

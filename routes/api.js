@@ -14,12 +14,13 @@ router.get('/users/:id', function (req, res) {
   const id = req.params.id;
   Promise.all([
     User.findOne({_id: id}),
-    Quote.random()
+    Quote.random(),
+    User.getTasks(id),
   ]).then(data => {
     user = UserSerializer.serialize(data[0].toObject());
     user = addMeta(user, {meta: data[1]});
     //Bug fix for relations
-    user.data.relationships = relationshipsFix(id);
+    user.data.relationships = data[2];
     res.json(user);
   }).catch(e => console.log(e));
 });
@@ -39,10 +40,10 @@ router.get('/messages/:id', function (req, res) {
 
 
 // middleware that is specific to this router
-router.use(function timeLog(req, res, next) {
-  console.log('Time: ', Date.now());
-  next();
-});
+// router.use(function timeLog(req, res, next) {
+//   console.log('Time: ', Date.now());
+//   next();
+// });
 
 function getUserData(user, tasks, callback) {
   User.findOne(user).then(user => {
@@ -61,7 +62,7 @@ router.post('/register', urlEncoder, function (req, res) {
     var story = new Task({_userId: newUser._id,});
     story.save(ErrorMessage);
     return res.json({text: 'User was created.'});
-  });
+  }).catch(ErrorMessage);
 });
 
 router.post('/token', function(req, res) {
@@ -79,8 +80,7 @@ router.patch('/tasks/:id', function (req, res) {
     .then(data => TaskDeserializer.deserialize(data))
     .then(data => {
       let id = req.get('api-key');
-      let month = moment().month();
-      let year = moment().year();
+      let {year, month} = datas(req);
       let name = data.name.replace(' ', '_');
       //Create object for changing days in month
       var $set = { $set: {} };
@@ -106,9 +106,8 @@ router.post('/tasks', function (req, res) {
 });
 
 router.get('/tasks', function (req, res) {
-  let month = (Object.keys(req.query).length) ? req.query.filter.month: 8;
+  let {month} = datas(req);
   let id = req.get('api-key');
-  console.log(2, req.header)
   Task.findOne({_userId: id, month}).then(tasks => {
     if (tasks) {
       return res.json(TaskSerializer.serialize(tasks.days));
@@ -119,8 +118,7 @@ router.get('/tasks', function (req, res) {
 
 router.get('/tasks/:id', urlEncoder, function (req, res) {
   let userId = parseInt(req.params.id);
-  let month = (Object.keys(req.query).length) ? req.query.filter.month : moment().month();
-  let year = (Object.keys(req.query).length) ? req.query.filter.year : moment().year();
+  let {year, month} = datas(req);
   let id = req.get('api-key');
   Task.findOne({_userId: id, month, year}).then(tasks => {
     if (tasks) {
@@ -135,24 +133,13 @@ function dataBaseError(err) {
   return console.error('There was a problem with the database', err);
 }
 
-function tasksObject(day = 0, track = false, complited = 1) {
-  return {
-    "tracking": track,
-    "complited": parseInt(complited),
-    "day": day,
-  };
+
+function datas(req) {
+  let month = (Object.keys(req.query).length) ? req.query.filter.month : moment().month();
+  let year = (Object.keys(req.query).length) ? req.query.filter.year : moment().year();
+  return {month, year};
 }
 
-function convertData(obj, month, year) {
-  let dates = [ "January", "February", "March", "April", "May", "June", "July",
-        "August", "September" ];
-  return obj.months[dates[month]].map((d, i)=> {
-    d._id = i,
-    d.month = month;
-    d.year = year;
-    return d;
-  });
-}
 
 /**
  * Testing purpose
