@@ -8,7 +8,6 @@ let obj = { sport: 0, health: 0, learn: 0, social: 0, creativity: 0 };
 const classifier = new natural.BayesClassifier();
 var stagesNet = new Architect.Perceptron(5, 7, 5);
 
-
 stagesNet.trainer.train(trainingData, options);
 let result = stagesNet.activate([1,0,1,0,0]);
 let index = getMaxIndex(result);
@@ -41,7 +40,7 @@ function newHabit(data) {
  * @param {classification object} classifier
  * @return {Object}
  */
-function stages(data, classifier) {
+function stages(data, classifier = bayer) {
   return data.reduce((p, n) => {
     let category = classifier.classify(n);
     p[category]++;
