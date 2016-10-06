@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const learning = require('./routes/ma');
-const api = require('./routes/api');
 const file = require('./routes/file');
 const {appLog} = require('./app/config/logger');
 const path = require('path');
@@ -34,7 +33,9 @@ app.set('view engine', 'jade');
  * Express routes
  */
 app.use('/learning', learning);
-app.use('/api', api);
+app.use('/api', require('./routes/api/user'));
+app.use('/api', require('./routes/api/message'));
+app.use('/api', require('./routes/api/tasks'));
 app.use('/file', file);
 
 app.get('/', function(req, res) {

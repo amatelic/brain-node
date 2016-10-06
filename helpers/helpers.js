@@ -58,10 +58,32 @@ let CommonManager = {
   }
 }
 
+/**
+ * Method for firinig callback1 if data exsists and firing call2
+ * if data dosen't exist.
+ * @param Object<MongoDB collection> collection
+ * @param Object query
+ * @param Function
+ * @param Function
+ * @return null
+ */
+function match(collection, query, call1, call2) {
+  if (collection && typeof collection.findOne === 'function') {
+    collection.findOne(query).then(data => {
+      if (data) {
+        call1(data);
+      } else {
+        call2('No data');
+      }
+    }).catch(ErrorMessage)
+  }
+}
+
 module.exports = {
   errors,
   setUrl,
   CommonManager,
   addMeta,
+  match,
   ErrorMessage
 }

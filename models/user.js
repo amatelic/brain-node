@@ -20,23 +20,27 @@ Users.statics.getTasks = function(id) {
   .then(relation('task', (d) => d[0].days.map((d, i) => ({'type': "task", 'id': i + 1 }))));
 }
 
-
+/**
+ * Create json parser
+ */
 function relation(type, callback) {
   let obj = {};
   let prural = type + 's';
   return (d, i) => {
     let data = callback(d, i);
     return {
-      [prural]: {
-          "links": {
-            "self": `http://localhost:5000/api/${prural}`,
-            "related": `http://localhost:5000/api/${prural}`,
-          },
-          data
+      tasks: d[0].days.map(d => d.name.replace('_', ' ')),
+      relations: {
+        [prural]: {
+            "links": {
+              "self": `http://localhost:5000/api/${prural}`,
+              "related": `http://localhost:5000/api/${prural}`,
+            },
+            data
+        }
       }
     }
   };
-
 }
 
 // "tasks": {
