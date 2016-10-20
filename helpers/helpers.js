@@ -68,6 +68,7 @@ let CommonManager = {
  * @return null
  */
 function match(collection, query, call1, call2) {
+  console.log(collection, 12)
   if (collection && typeof collection.findOne === 'function') {
     collection.findOne(query).then(data => {
       if (data) {

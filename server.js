@@ -7,11 +7,10 @@ const path = require('path');
 const moment = require('moment');
 const bodyParser = require('body-parser');
 const CONFIG = require('./app/config/app');
+const chatbot = require('./chatbot/index');
 let app = express();
 // var server = require('http').Server(app);
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
-
+chatbot(app);
 function webPageNotFound(req, res, next) {
   res.status(404);
    res.render('errors/404', { url: req.url });
@@ -52,13 +51,6 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 * Web sockets
 */
 
-io.on('connection', function (socket) {
-  socket.on('id', id => console.log(id));
-  socket.emit('open', { hello: 'world' });
-  socket.emit('message', { hello: 'world' });
-  socket.emit('close', { hello: 'world' });
-});
-
 /**
  * Error pages
  */
@@ -74,7 +66,6 @@ app.use(function(error, req, res, next) {
 /**
  * App listening
  */
-server.listen(7000);
 app.listen(CONFIG.PORT, function() {
   console.log(`Server listening on port ${CONFIG.PORT}`);
 });

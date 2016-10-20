@@ -63,7 +63,7 @@ router.post('/register', urlEncoder, function (req, res) {
 
 router.post('/token', function(req, res) {
   let {username, password} = req.body;
-  console.log(1, req.body)
+  console.log(username, password)
   match(User, {email: username},
     (user) => res.json({ 'access_token': user._id, 'user_id': user._id }),
     (_) => res.status(401).json({errors: [Error.user['no-user']]})

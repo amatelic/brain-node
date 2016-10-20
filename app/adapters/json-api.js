@@ -8,7 +8,7 @@ const JSONAPIDeserializer = require('jsonapi-serializer').Deserializer;
 
 var TaskSerializer = new JSONAPISerializer('tasks', {
   // id: '_id',
-  attributes: ['year', 'month', 'days', 'time','schedule', 'name']
+  attributes: ['year', 'month', 'days', 'time','schedule', 'name', 'type']
 });
 
 var UserSerializer = new JSONAPISerializer('users', {
@@ -33,7 +33,7 @@ var QuoteSerializer = new JSONAPISerializer('quotes', {
 
 var TaskDeserializer = new JSONAPIDeserializer('tasks', {
   // id: '_id',
-  attributes: ['year', 'month', 'days', 'time','schedule', 'name']
+  attributes: ['year', 'month', 'days', 'time','schedule', 'name', 'type']
 });
 
 //relationships fix
