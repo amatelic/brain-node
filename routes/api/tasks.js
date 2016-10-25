@@ -70,6 +70,7 @@ function dataBaseError(err) {
 }
 
 
+//function for extracting get date parames
 function datas(req) {
   let month = (Object.keys(req.query).length) ? req.query.filter.month : moment().month();
   let year = (Object.keys(req.query).length) ? req.query.filter.year : moment().year();
