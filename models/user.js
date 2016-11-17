@@ -3,42 +3,65 @@ const moment = require('moment');
 var Schema = mongoose.Schema;
 let Task = mongoose.model("Task");
 
+
 let Users = Schema({
   username: String,
   name:   String,
   email:  String,
+  image: String,
   created: { type: Date, default: Date.now },
   plan: { type: String, default: 'basic' },
   data: [{ type: Schema.Types.ObjectId, ref: 'Task' }],
-  //{type: mongoose.Schema.ObjectId, default: mongoose.Types.ObjectId },
 });
+
+Users.statics.new = function (data) {
+  data.image = 'http://localhost:5000/public/images/unknown_user.jpg'
+  this.create(data, (err, user) => {
+    if (err) { return new Error('Could not create user'); }
+
+    var task = new Task({_userId: user._id});
+    task.save((err) => new Error('Task was not created'));
+  });
+}
 
 Users.statics.getTasks = function(id) {
   let year = moment().year();
   let month = moment().month();
-  return Task.find({_userId: id, year, month})
-  .then(relation('task', (d) => d[0].days.map((d, i) => ({'type': "task", 'id': i + 1 }))));
+  return Task.findOne({_userId: id, year, month})
+             .then(getRealtion('task'));
 }
 
-/**
- * Create json parser
- */
-function relation(type, callback) {
-  let obj = {};
-  let prural = type + 's';
-  return (d, i) => {
-    let data = callback(d, i);
+function getRealtion(task) {
+  let prural = task + 's';
+  return (tasks) => {
+    tasks = (tasks) ? tasks : {days: []};
     return {
-      tasks: d[0].days.map(d => d.name.replace('_', ' ')),
+      tasks: getNames(tasks),
       relations: {
         [prural]: {
-            "links": {
-              "self": `http://localhost:5000/api/${prural}`,
-              "related": `http://localhost:5000/api/${prural}`,
-            },
-            data
+          'links': links(prural),
+          'data': getTasks(tasks),
         }
       }
+    }
+  }
+}
+
+function getNames(tasks) {
+  return tasks.days.map(task => task.name.replace('_', ' '));
+}
+
+function getTasks(tasks) {
+  return tasks.days.map((d, i) => {
+    return {'type': "task", 'id': d.id };
+  });
+}
+
+function links(prural) {
+  return {
+    "links": {
+      "self": `http://localhost:5000/api/${prural}`,
+      "related": `http://localhost:5000/api/${prural}`,
     }
   };
 }

@@ -52,10 +52,7 @@ router.post('/register', urlEncoder, function (req, res) {
   match(User, {email},
     (user) => res.status(409).nojson(Error.user['user-exsist']),
     (_) => {
-      var newUser = new User(req.body);
-      newUser.save(ErrorMessage);
-      var story = new Task({_userId: newUser._id,});
-      story.save(ErrorMessage);
+      User.new(req.body);
       return res.json(Error.user['created']);
     }
   );
@@ -63,27 +60,11 @@ router.post('/register', urlEncoder, function (req, res) {
 
 router.post('/token', function(req, res) {
   let {username, password} = req.body;
-  console.log(username, password)
   match(User, {email: username},
     (user) => res.json({ 'access_token': user._id, 'user_id': user._id }),
     (_) => res.status(401).json({errors: [Error.user['no-user']]})
   );
 });
 
-function generateDays(schedule, year, month)  {
-  year = year || moment().year();
-  month = month || moment().month();
-  let wholeMonth = moment([year, month]).daysInMonth();
-  let dd = moment([year, month]);
-  let days = [];
-  for (let i = 1; i <= wholeMonth; i++) {
-    days.push({
-      comlited: 0, day: i,
-      tracking: schedule[dd.day()],
-    });
-    dd.add(1, 'days').day();
-  }
-  return days;
-}
 
 module.exports = router;

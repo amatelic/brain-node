@@ -32,6 +32,24 @@ function newHabit(data) {
   return habits[index];
 }
 
+/**
+ * Getting new habit by bayesian algorithem
+ * @method bayesHabit
+ * @param  {Object}   stages Stage object
+ * @return {[Object]}         Object with selected habit
+ */
+
+function bayesHabit(stages) {
+  let defaultValue = { name: null,  count: 0 };
+  return Object.keys(stages).reduce((prev, next) => {
+    if (prev.count <= stages[next]) {
+      prev.name = next;
+      prev.count = stages[next];
+    }
+    return prev;
+  }, defaultValue);
+}
+
 
 /**
  * Function for classifing data and returning
@@ -68,5 +86,6 @@ module.exports = {
   stages,
   newHabit,
   stageClassifier,
-  convertToBinaryStages
+  convertToBinaryStages,
+  bayesHabit
 };
